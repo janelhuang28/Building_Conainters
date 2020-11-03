@@ -52,6 +52,6 @@ docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG
 2. Create a new database
 3. Click on the database and create a new collection called users
 The resulting database and collection should be as follows
-<img src="/images/collection.png" height=200>
+<img src="collection.PNG" height=200>
 
 
