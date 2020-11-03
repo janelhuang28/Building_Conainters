@@ -52,6 +52,14 @@ docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG
 2. Create a new database
 3. Click on the database and create a new collection called users
 The resulting database and collection should be as follows
-<img src="collection.PNG" height=200>
+<img src="collection.PNG" height=600>
 
+## Run the node JS web application and a new entry
+1. npm install
+2. node server.js
+3. In web browser: localhost:3000
+4. Click on edit profile and change the profile entries
+5. Refresh the mongo db collections page to see if the new entry has been added
+<img src="adding_new_entry.PNG" height=600>
+<img src="mongodb_result" height=600>
 
