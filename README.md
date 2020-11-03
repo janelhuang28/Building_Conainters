@@ -61,5 +61,5 @@ The resulting database and collection should be as follows
 4. Click on edit profile and change the profile entries
 5. Refresh the mongo db collections page to see if the new entry has been added
 <img src="adding_new_entry.PNG" height=600>
-<img src="mongodb_result" height=600>
+<img src="mongodb_result.PNG" height=600>
 
