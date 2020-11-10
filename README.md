@@ -28,7 +28,7 @@ After containers: No environment configuration on servers except the docker imag
 * ps - lists the running images. Use -a to list all running and not running containers
 * stop <container_id> - stops the container
 * start <container_id> - restarts a stopped container
-* images - list the images 
+* images - list the images. To remove an image, use rmi <image_id>
 
 # Part 2: Advanced Docker Commands
 * -p<host_port>:<container_port> -Binds a host port to a container port. This is useful if you have 2 of the same services running on the same port. 
@@ -62,4 +62,37 @@ The resulting database and collection should be as follows
 5. Refresh the mongo db collections page to see if the new entry has been added
 <img src="adding_new_entry.PNG" height=600>
 <img src="mongodb_result.PNG" height=600>
+
+# Part 5: Compose Containers
+Compose is a structured way to package the run command for a specific container. This eases the process of running the same run command multiple times. Note that creating a new network manually is not neccessary because when two containers are specified in the same service, they are automatically in the same network. 
+
+## Running the containers
+docker-compose -f <filename> up
+* f: filename
+* up: runs the comtainers. Use -d to run in detached mode. 
+
+## Stopping the containers
+docker-compose -f <filename> down
+* down: stops the containers
+  
+# Part 6: Dockerfiles
+Docker files are a bluepring for building an image.
+
+## Dockerfile variables
+* FROM - installs an image
+* ENV - sets the environment vairables
+* RUN - runs any set of commands
+* CMD - entry point command. Runs before the 'RUN' command. E.g. CMD \["node", "server.js"]. Starts the application with node server.js
+* COPY - copys the files from the host into the container
+
+## Building the image
+docker build -t <app_name>:<version> <directory>
+* t: the tag 
+
+## Rebuilding the Dockerfile
+1. Stop the container via 'stop'
+2. Remove the container via 'rm'
+3. Remove the image via 'rmi'
+  
+
 
